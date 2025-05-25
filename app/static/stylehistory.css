@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  padding: 100px 10px 10px;
+  background: radial-gradient(circle, rgba(174, 201, 238, 1) 2%, rgba(148, 187, 233, 1) 100%);
+  flex-wrap: wrap;
+}
+
+.header {
+  background: #222;
+  height: 100px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.history-container {
+  background-color:  #D4D4D4;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 1800px;
+}
+
+.history-header {
+  position: relative;
+}
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.closebtn img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+h1 {
+  padding: 15px;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+.history-table thead {
+  background-color: #444;
+  color: white;
+}
+
+.history-table th, .history-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.history-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.history-table td {
+  word-break: break-word;
+  max-width: 300px;
+  white-space: normal;
+}

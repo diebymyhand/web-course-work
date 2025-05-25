@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    padding: 15px;
+    background: radial-gradient(circle, rgba(174, 201, 238, 1) 2%, rgba(148, 187, 233, 1) 100%);
+    flex-wrap: wrap;
+}
+
+#register-wrapper {
+    background: #D4D4D4;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    height: auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+#register-wrapper .title {
+    height: 120px;
+    background: #222;
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#register-wrapper form {
+    padding: 30px;
+}
+
+#register-wrapper form .row {
+    height: 60px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.row input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    
+}
+
+.loginbtn {
+    background-color: #222;
+    color: #fff;
+}
+
+#register-wrapper form .signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+
+form .button input:hover {
+  background: #222222e8;
+  transition: background 0.2s ease;
+}
+
+.error-message {
+    color: #b00020;
+    background-color: #ffe6e6;
+    border: 1px solid #ffcccc;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    text-align: center;
+}

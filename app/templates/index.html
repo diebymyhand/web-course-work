@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR-code generator</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+  <body>
+    <header class="header">
+      <h1 style="margin: 0;">QR App</h1>
+      <div>
+        <span style="margin-right: 20px; color: white;">
+        Welcome, {{ username }}!
+        </span>
+
+        <a href="/history" style="margin-right: 15px; color: white; text-decoration: none;">View history</a>
+        <a href="/logout" style="color: white; text-decoration: none;">Logout</a>
+      </div>
+    </header>
+
+    <div class="reader-wrapper">
+      <div class="form-pair">
+
+        <form id="upload-form">
+          <input type="file" hidden id="file-input" accept="image/*">
+          <img src="static/img/upload.png" alt="upload" style="z-index: 1;">
+          <div id="content">
+            <p>Upload QR-code</p>
+          </div>
+          <button type="button" id="stltctBtn" class="hidden"></button>
+        </form>
+
+        <form id="camera-scan" class="camera-scan">
+          
+          <div id="scan-content">
+            <img src="static/img/scan.png" alt="scan">
+            <p>Scan with camera</p>
+          </div>
+  
+          <button type="button" id="start-camera" class="hidden"></button>
+
+          <div id="reader" class="hidden"></div>
+
+        </form>
+
+      </div>
+
+      <div class="details">
+        <textarea spellcheck="false" disabled></textarea>
+        <div class="buttons">
+          <button class="close">Close</button>
+          <button class="copy">Copy</button>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="generator-wrapper">
+      <header>
+        <h1>Generate QR-code</h1>
+        <p>Enter text or URL</p>
+      </header>
+
+      <form id="generate-form">
+        <input type="text" id="qrData" name="qr_data" placeholder="Enter text or URL" required>
+        <button type="submit">Generate QR-code</button>
+      </form>
+
+      <div id="qrImage" class="qr-code-hidden">
+        <img id="qrPreview" src="" alt="qr-code">
+      </div>
+      
+    </div>
+
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <script src="static/script.js"></script>
+  </body>
+</html>
